@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otros casos</title>
+    <link rel="stylesheet" href="arte.css">
+</head>
+<body>
+    <h1> CASOS <br>
+        <i>ROBOS DE ARTE </i></h1>
+         <a href="index.html"><button> volver</button></a>
+     
+         <p>En este artículo vas a encontrar casos sobre robos de arte, como por ejemplo:</p>
+         <div class="carrusel-contenedor">
+            <div class="carrusel" id="carrusel">
+              <div class="diapositiva">
+                <img src="https://www.lanacion.com.ar/resizer/v2/por-los-detalles-artisticos-la-belleza-y-el-V5WVTQ23RFALJCFAZT3G5TWCI4.jpg?auth=97afa5939b5ab8ee57916a3509d21c4e5440142ce7872565cc15951a53205682&width=420&height=280&quality=70&smart=true" alt="Imagen 1">
+              </div>
+              <div class="diapositiva">
+                <img src="https://static01.nyt.com/images/2024/03/18/arts/18heist-esp-promo/18heist-promo-static-facebookJumbo.png?year=2024&h=550&w=1050&s=4fe731a0194efc03a1db491e157a98d125d0bb8793024cc56b92715bb88a9503&k=ZQJBKqZ0VN" alt="Imagen 2">
+              </div>
+              <div class="diapositiva">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJeItmwh0NCJHbudd23VUVS1tfzVeGb4EqOl3u7tdVzBz14DFIbckxdbUc&s=10" alt="Imagen 3">
+              </div>
+            
+            </div>
+              <button class="boton-carrusel anterior" onclick="mover(-1)">&#10094;</button>
+              <button class="boton-carrusel siguiente" onclick="mover(1)">&#10095;</button>
+        
+        
+            </div>
+         
+         
+         <h2>
+             <Ul>
+                 <li>Caso del Robo de la Camara Ambar</li>
+                 <li> El Atraco al Museo Isabella Stewart Gardner (1990)</li>
+                 <li>El hundimiento y la Leyenda del tesoro de San José</li>
+             </Ul>
+         </h2>
+         <p>Vas a podes encontrar más casos sin resolver en el apartado Volver.</p>
+     
+         <h2>Caso del robo de la Cámara Ámbar</h2>
+         <p>Fue considerada la octava maravilla del mundo. Se trata de una habitación entera hecha de paneles de ámbar, oro y espejos regalada al Zar de Rusia, saqueada por los nazis en la Segunda Guerra Mundial y desvanecida sin dejar rastro directo hasta hoy. </p>
+         
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp8tjChXFIOVqAs0xYVCKUXvoM0liBPDxlOddqYLeZJ3RFrMSJEdGv_EA&s=10" witdh="200" height="240">
+     
+             <h2>Caso del Atraco al Museo Isabella Stewart Gardner (1990)</h2>
+             <p>El 18 de marzo de 1990, el Museo Isabella Stewart Gardner de Boston se convirtió en el escenario del mayor robo de arte de la historia. Durante la madrugada, dos hombres disfrazados de policías sustrajeron 13 valiosas piezas, entre ellas obras de Rembrandt y Vermeer, valoradas en más de 500 millones de dólares. A más de tres décadas del atraco, 
+                el caso sigue sin resolverse, manteniendo la intriga por las obras desaparecidas y las posibles conexiones con la mafia corsa.
+                 </p>
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrAF3SAuC1DkJKzhbNtak4mmA8w7RxIo9Vrh0vCTj4naE8BmvdAZZZlv9I&s=10" width="400" height="240">
+     
+                 <h2>Caso del hundimiento y la Leyenda del tesoro de San José</h2>
+                 <p> En las profundidades del Caribe yace el legendario tesoro perdido del galeón español San José, barco cargado con un tesoro que hoy podría 
+                    ascender a casi 19.000 millones de euros por el oro, la plata y las esmeraldas que contiene. La carga que el barco transportaba 
+                    cuando fue hundido en 1708 por la marina real británica en un ataque cerca de la Isla Barú, frente a las costas de Colombia. 
+                    La acción no fue nada fortuita: el galeón formaba parte de una flota de tesoros que se transportaban desde Perú hacia España, 
+                    en medio del conflicto de la Guerra de Sucesión Española. Así, lograron detonar los polvorines del San José, hundiéndolo con toda su preciada carga. </p>
+                     <img src="https://imagenes.elpais.com/resizer/v2/T2KVCXGQLFDEDFIE6XRCGKP6VI.jpeg?auth=b959a7ded73e618af3995d0fad034927537b2663870bb8640d2d03260c507da2&width=1960&height=1470&smart=true" width="400" height="240">
+     
+</body>
+<script>
+    let indiceActual = 0;
+
+    function mover(direccion) {
+      const diapositivas = document.querySelectorAll('.diapositiva');
+      const totalDiapositivas = diapositivas.length;
+     
+      indiceActual += direccion;
+
+      if (indiceActual >= totalDiapositivas) {
+        indiceActual = 0;
+      } else if (indiceActual < 0) {
+        indiceActual = totalDiapositivas - 1;
+      }
+
+      const carrusel = document.getElementById('carrusel');
+      carrusel.style.transform = `translateX(-${indiceActual * 100}%)`;
+    }
+  </script>
+</html>

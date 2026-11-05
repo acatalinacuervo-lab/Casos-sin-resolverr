@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Otros casos</title>
+</head>
+<body>
+   <h1> CASOS <br>
+   <i>AEREOS </i></h1>
+    <a href="index.html"><button> volver</button></a>
+
+    <p>En este artículo vas a encontrar casos sobre desapariciones e incidentes sobre vuelos, como por ejemplo:</p>
+     <div class="carrusel-contenedor">
+        <div class="carrusel" id="carrusel">
+          <div class="diapositiva">
+            <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8eX7HJAbXdPZtDPqY1cBkVvE5U1Q0WHTmXuXwLMGjhw&s=10" alt="Imagen 1">
+          </div>
+          <div class="diapositiva">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7z5Yv66c8xDnjnk2lcxpRp-7dn782yiZ9jwTctXWm7A&s=10" alt="Imagen 2">
+          </div>
+          <div class="diapositiva">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjx1BQxXl4GwCWrE4DOQAsqrV_t-hJ93Ms-myCqi38gw&s=10" alt="Imagen 3">
+        </div>
+        
+        </div>
+          <button class="boton-carrusel anterior" onclick="mover(-1)">&#10094;</button>
+          <button class="boton-carrusel siguiente" onclick="mover(1)">&#10095;</button>
+    
+        </div>
+   
+   
+   
+    <h2>
+        <Ul>
+            <li>Caso de la desaparición del vuelo MH370</li>
+            <li>Caso de la desaparición de Amelia Earhart</li>
+            <li>Caso de de los vuelos 1736 de Pan Am y 4805 de KLM (España, 1977)</li>
+        </Ul>
+    </h2>
+    <p>Vas a podes encontrar más casos sin resolver en el apartado Volver.</p>
+
+    <h2>Caso de la desaparición del vuelo MH370</h2>
+    <p>En 2014, el vuelo Malaysia Airlines con 239 personas desapareció sin dejar rastro. Tras años de su búsqueda, con tecnología satelital y submarina, no hay explicación definitiva.
+        Algunas piezas del avión han sido recuperadas, pero el misterio persiste. </p>
+    
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/11/MAS_plane.jpg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original" witdh="200" height="240">
+
+        <h2>Caso de la desaparición de Amelia Earhart</h2>
+        <p>Fue la piloto de aviones más famosa en la historia. Sorprendió a todos en 1928 siendo la primera mujer en cruzar el Atlantico. Un día, decidió dar la vuelta al mundo en avión. El 2 de julio de 1936, ella y su nave desaparecieron en mitad del Océano Pacifico. Aún hoy no se sabe qué pasó.
+            Se manejan cuatro teorías sobre su final: que ella y su copiloto se estrellaron en el océano pacifico, 
+            algo que mantiene el Gobierno de Estados Unidos.
+            La segunda es que aterrizaron en la isla de Nikumaroro y murieron abandonados.
+            La tercera es que fueron tomados prisioneros por las tropas de Japón y ejecutados por espías.
+            Y la cuarta es que desaparecieron misteriosamente en el aire.
+            </p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn6OHBMCD3RAFEb-jhn0-5jC0y8x-r5wZoTq6Gt4gZ7_zoU_phVSVRTga8&s=10" width="400" height="240">
+
+            <h2>Caso de los vuelos 1736 de Pan Am y 4805 de KLM (España, 1977)</h2>
+            <p>El 27 de marzo de 1977, el aeropuerto de Los Rodeos, en Tenerife, fue <b>escenario del accidente más letal de la aviación</b>. Dos aviones, el vuelo 1736 de Pan Am y el vuelo 4805 de KLM, se preparaban para despegar tras haber sido desviados por una amenaza de bomba en Gran Canaria. Una densa niebla, la ausencia de radar terrestre y una confusión en las comunicaciones provocaron que el avión de KLM, comandado por Jacob van Zanten, iniciara el despegue mientras el de Pan Am aún rodaba por la pista. <br><div></div>
+
+                El capitán de la aerolínea estadounidense advirtió la inminente colisión con un grito desesperado: “¡Ahí está, mírenlo! ¡Maldita sea, ahí viene!”, mientras su primer oficial instaba a la evacuación. El impacto resultó en que <b>583 personas murieron</b>, incluyendo a todos los ocupantes del avión de KLM. Entre los supervivientes del vuelo de Pan Am, Joani Feathers <b>describió la explosión como "una bomba atómica"</b> en declaraciones <i>con Daytona Beach News-Journal</i>. </p>
+                <img src="https://www.infobae.com/resizer/v2/LSTL6HYTA5FQZKC4BJ4UGCERJI.jpg?auth=071c35b86a97e8a70a6551c3016de9a45b13e0638c148ec2d4169a3123bfca20&smart=true&width=992&height=558&quality=85" width="400" height="240">
+
+
+        </body>
+        <script>
+            let indiceActual = 0;
+        
+            function mover(direccion) {
+              const diapositivas = document.querySelectorAll('.diapositiva');
+              const totalDiapositivas = diapositivas.length;
+             
+              indiceActual += direccion;
+        
+              if (indiceActual >= totalDiapositivas) {
+                indiceActual = 0;
+              } else if (indiceActual < 0) {
+                indiceActual = totalDiapositivas - 1;
+              }
+        
+              const carrusel = document.getElementById('carrusel');
+              carrusel.style.transform = `translateX(-${indiceActual * 100}%)`;
+            }
+          </script>
+</html>

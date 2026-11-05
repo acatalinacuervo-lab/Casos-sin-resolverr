@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aliens.css">
+    <title>Otros casos</title>
+</head>
+<body>
+   <h1> CASOS <br>
+   <i>ALIENÍGENAS </i></h1>
+    <a href="index.html"><button>Volver</button></a>
+
+    <p>En este artículo vas a encontrar casos sobre desapariciones e incidentes sobre aliens, como por ejemplo:</p>
+    <div class="carrusel-contenedor">
+        <div class="carrusel" id="carrusel">
+          <div class="diapositiva">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb2oMWlk9tGlUV6SXjPHonwIM9oninwzgSm16bjuQYuxmrcy3jsJQcPw&s=10" alt="Imagen 1">
+          </div>
+          <div class="diapositiva">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAqg_ykGY91rzxACaoesx4Wab40wprwzdhkA8E89P6uVgz0Fj9ekv_4coK&s=10" alt="Imagen 2">
+          </div>
+          <div class="diapositiva">
+            <img src="https://ichef.bbci.co.uk/ace/ws/640/amz/worldservice/live/assets/images/2011/04/15/110415133319_model_alien_304x171_ap.jpg.webp" alt="Imagen 3">
+          </div>
+        
+        </div>
+          <button class="boton-carrusel anterior" onclick="mover(-1)">&#10094;</button>
+          <button class="boton-carrusel siguiente" onclick="mover(1)">&#10095;</button>
+    
+    
+        </div>
+   
+   
+   
+    <h2>
+        <Ul>
+            <li>Caso de Modesto “Cota” Colman</li>
+            <li>Caso del Incidente de Ovni de Colares</li>
+            <li>Casos que aparecen abiertos y luego cerrados</li>
+        </Ul>
+    </h2>
+    <p>Vas a podes encontrar más casos sin resolver en el apartado Volver.</p>
+
+    <h2>Caso de Modesto “Cota” Colman</h2>
+    <p>Ocurrido el 16 de octubre de 1992, en la localidad entrerriana de Victoria, Argentina. Colman era un trabajador rural y ganadero de 65 años que cuidaba un campo. Cerca de las 22:30, fue a cerrar un molino de viento. Relató que se iluminó el lugar de forma repentina y que un objeto no identificado con “rayos” de luz que lo quemaron a él. <div></div>
+
+        En su relato, intentó defenderse con un cuchillo (facón) antes de huir arrastrándose por el campo. 
+        
+         </p>
+    
+        <img src="https://media.wou.com.ar/uploads/2023/08/Captura-de-pantalla-2023-08-23-a-las-13.43.04.jpg" width="450" height="350">
+
+        <h2>Caso del Incidente de Ovni de Colares</h2>
+        <p>Ocurrió en 1977 en la isla de Colares, Brasil, cuando habitantes que vivían allí reportaron luces misteriosas que presuntamente les lanzaban “rayos de energía”. <div></div> 
+
+            Testigos afirmaron que vieron luces de colores en forma de esferas, cilindros, o discos que emitían haces de luz. Las personas alegaron sufrir quemaduras leves, marcas en la piel, parálisis temporal y la sensación de que se les extraía energía o sangre.
+            
+            </p>
+            <img src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/A5CE/production/_122664424_bbcbrasil_registrodesupostovnifeitopelofotgrafoadenirbritto_acervojacksoncamargo.jpg.webp" width="400" height="240">
+            <figcaption>Imagen de un supuesto Ovni captado por el fotógrafo Adenir Britto</figcaption>
+            
+
+            <h2>Casos que aparecen abiertos y luego cerrados</h2>
+            <p> En Seattle, en el estado de Washington, al noroeste de EE.UU, en abril de 1956, un testigo describió haber visto un “objeto redondo blanco, de la mitad del tamaño de la Luna, dando vueltas y vueltas”, según los documentos.<div></div>
+
+                Los investigadores concluyeron que era un meteorito y cerraron el caso. Y en enero de 1961 en Newark, Nueva Jersey, una persona dijo haber visto un objeto de color gris oscuro tipo “un jet sin alas”. Ese objeto fue posteriormente considerado un avión que volaba la zona.<div></div>
+                </p>
+                <img src="https://ichef.bbci.co.uk/ace/ws/304/amz/worldservice/live/assets/images/2012/09/26/120926155336_ovnis_304x171_bbc.jpg.webp" width="400" height="240">
+
+        </body>
+
+        <script>
+            let indiceActual = 0;
+        
+            function mover(direccion) {
+              const diapositivas = document.querySelectorAll('.diapositiva');
+              const totalDiapositivas = diapositivas.length;
+             
+              indiceActual += direccion;
+        
+              if (indiceActual >= totalDiapositivas) {
+                indiceActual = 0;
+              } else if (indiceActual < 0) {
+                indiceActual = totalDiapositivas - 1;
+              }
+        
+              const carrusel = document.getElementById('carrusel');
+              carrusel.style.transform = `translateX(-${indiceActual * 100}%)`;
+            }
+          </script>
+</html>

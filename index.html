@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casos sin resolver</title>
+  <link rel="stylesheet" href="styles.css">
+  
+    <head>
+<body>
+    <a href="casosaereos (1).html"><button>CASOS AEREOS</button></a> <a href="casosasesinos.html"><button>CASOS ASESINOS</button></a><a href="casosalienigenas.html"><button>CASOS ALIENÍGENAS</button></a> <a href="casosderobodearte.html"><button>CASOS DE ROBOS DE ARTE</button></button></a>
+    <h1>Los crímenes que la historia <br>
+        <i>no pudo resolver</i>.</div> </h1>
+
+        <p>En este artículo van a encontrar los tres misterios más famosos sobre desapariciones que nunca tuvieron una respuesta. Vas a encontrar casos como:</p>
+            <div class="carrusel-contenedor">
+                <div class="carrusel" id="carrusel">
+                  <div class="diapositiva">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMRzdl3szeU_5jHorNvRcdhwPn8yHfId9CYWfshWFDaA&s=10" alt="Imagen 1">
+                  </div>
+                  <div class="diapositiva">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5mHSpFQty7CIWQo4AsIgfp0mj6YHwP7N8Ze67HXDoXQ&s=10" alt="Imagen 2">
+                  </div>
+                  <div class="diapositiva">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9-fZ7FpW5PjVvKZ8xJjPHTHD4yykMYaBgMeRBLa9R9A&s=10" alt="Imagen 3">
+                  </div>
+                
+                </div>
+                  <button class="boton-carrusel anterior" onclick="mover(-1)">&#10094;</button>
+                  <button class="boton-carrusel siguiente" onclick="mover(1)">&#10095;</button>
+            
+            
+                </div>
+        <h2>
+            </Ul>
+            
+                <li> Caso de Madeline Mcann </li>
+                <li> Caso de JonBenét Ramsey </li>
+                <li> Caso de Emanuela Orlandi </li>
+
+            </Ul>
+        </h2>
+
+        <p>En el apartado CASOS AEREOS vas a poder encontrar más casos, pero sobre vuelos.</p>
+        <p>En el apartado CASOS ASESINOS vas a encontrar otra página sobre casos de asesinos.</p>
+        <p>En el apartado CASOS ALIENÍGENAS vas a encontrar otra página sobre casos de aliens.</p>
+    <h2>Caso de Madeline Mcann</h2>
+    <p>Madeleine McCann desapareció el 3 de mayo de 2007, durante unas vacaciones con su familia en el Algarve portugués. La niña británica y sus dos hermanos pequeños dormían en el apartamento 5A del complejo turístico Ocean Club de Praia da Luz, mientras sus padres cenaban con unos amigos a unos 60 metros de la habitación. Dijeron los comensales que Kate y Gerry McCann llegaron al restaurante 'Tapas' alrededor de las 20.40. Dijo el matrimonio que ambos se turnaban para ir cada 20 o 30 minutos a vigilar a los pequeños. A las 22.00 horas, en uno de esos 'turnos', la madre volvió gritando: «Se la han llevado». Desde ese momento todavía no se sabe que le paso a ella quedando el misterio inconcluso. </p>
+<img src="https://s.france24.com/media/display/09412450-b0c2-11ea-b224-005056bff430/w:1280/p:4x3/MADELEINE%201%20OK.jpg" width="300" height="240">
+
+    <h2>Caso de JonBenét Ramsey</h2>
+    <p> todo comenzó una mañana cuando sus padres se despertaron y se encontraron que la cama de su hija estaba vacía y una carta sobre la misma, escrita a mano, en la que exigían un rescate de 118.000 dólares si querían volverla a ver con vida. Sin embargo, horas más tarde, el padre encontró el cuerpo de su hija en el sótano de su casa.</p>
+
+    <img src="https://m.media-amazon.com/images/M/MV5BNjIwYWFjZDAtYzU4Ni00MjFkLTg1OWMtMjc1NzVlMmQ4ZDNlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" width="300" height="240"
+>
+
+<h2>Caso de Emanuela Orlandi </h2>
+<p>Es 1983. Emanuela tiene 15 años. Va a segundo de la secundaria en una escuela de Ciudad del Vaticano.En horario de clases, durante un recreo, Emanuela llama por teléfono a su casa para hablar con su madre, pero como María no está conversa con su hermana mayor.
+    En la charla, Emanuela le cuenta a Federica por qué tardó tanto en llegar a clase: recibió una oferta de trabajo de un representante de Avon Cosmetics. Su hermana, en respuesta, le sugiere que antes de aceptar cualquier cosa lo hable con sus padres. Su Próximo destino era su casa. Ya en la parada de autobuses, Orlandi espera junto a otra niña. Y luego nunca mas la han visto, 40 años después su desaparición sigue siendo un misterio. 
+    </p>
+   <img src="https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/151E5/production/_107810568_pywj3f.jpg.webp" width="300" height="240">
+</body>
+<script>
+    let indiceActual = 0;
+
+    function mover(direccion) {
+      const diapositivas = document.querySelectorAll('.diapositiva');
+      const totalDiapositivas = diapositivas.length;
+     
+      indiceActual += direccion;
+
+      if (indiceActual >= totalDiapositivas) {
+        indiceActual = 0;
+      } else if (indiceActual < 0) {
+        indiceActual = totalDiapositivas - 1;
+      }
+
+      const carrusel = document.getElementById('carrusel');
+      carrusel.style.transform = `translateX(-${indiceActual * 100}%)`;
+    }
+  </script>
+</html>

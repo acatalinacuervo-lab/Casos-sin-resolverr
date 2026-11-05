@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asesinos.css">
+    <title>Casos asesinos</title>
+</head>
+<body>
+      
+    <h1> CASOS <br>
+        <i>ASESINOS </i></h1>
+    <a href="index.html"><button>volver</button></a>
+    <p>En este artículo vas a encontrar casos sobre los tres asesinos mas impactantes del mundo como por ejemplo:</p>
+  
+    <div class="carrusel-contenedor">
+    <div class="carrusel" id="carrusel">
+      <div class="diapositiva">
+        <img src="https://historylink.org/Content/Media/Photos/Large/Bundy_TNT0106B.jpeg" alt="Imagen 1">
+      </div>
+      <div class="diapositiva">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCuVSGM4ZtFSPQ-37hjS8kL98JF1H_LJuqgAsOzvydmA&s=10" alt="Imagen 2">
+      </div>
+      <div class="diapositiva">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuIFx4SqAczPtDDnMavJdWvr-dG9Zn2ypolIdqeiqr3w&s=10" alt="Imagen 3">
+      </div>
+    
+    </div>
+      <button class="boton-carrusel anterior" onclick="mover(-1)">&#10094;</button>
+      <button class="boton-carrusel siguiente" onclick="mover(1)">&#10095;</button>
+
+
+    </div>
+</div>
+   <h2>
+     <Ul>
+            <li> Ted Bundy </li>
+            <li> jeffrey Dahmer </li>
+            <li> Charles Manson </li>
+        
+        </Ul>
+   </h2>
+    <h2> Ted Bundy </h2> 
+       
+        <img src= "https://upload.wikimedia.org/wikipedia/commons/c/cc/Ted_Bundy_headshot.jpg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original width=" width="300" height="240">
+        <p>Fue un asesino serial que confesó haber cometido numerosos asesinatos durante la década de 1970 en Estados Unidos Unidos. Asesinó a numerosas mujeres y niñas durante la década de 1970. Confesó 30 asesinatos, aunque se sospecha que pudo haber cometido más. Las investigaciones policiales relacionaron distintos casos con él. Fue detenido en 1975 y posteriormente volvió a ser arrestado después de escapar de la custodia policial.</p>
+        <h2> jeffrey Dahmer </h2> 
+            <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLNIYfNK8K1YgjJpNL6kJEjFUAHGRmsoZCPduDC5cNNw&s"  width="300" height="240">
+<p>  Fue un asesino serial condenado por 15 asesinatos en Wisconsin, aunque cometió 17 asesinatos en total. Asesinó a 17 hombres y adolescentes entre 1978 y 1991. Solía acercarse a sus víctimas en lugares públicos y las llevaba a su departamento. El 22 de julio de 1991, un hombre logró escapar de su departamento y pidió ayuda a la policía. Los agentes investigaron y encontraron pruebas que relacionaban a Dahmer con numerosos asesinatos. En 1992 recibió varias condenas a cadena perpetua.</p>
+    <h2> Charles Manson </h2>
+       <img src = "https://cdn-images.dzcdn.net/images/artist/33a7ad9d1f09ff208d8d48c49595098c/1900x1900-000000-80-0-0.jpg" width="300" height="240">
+<p>Fue el líder de un grupo conocido como la Familia Manson, en Estados Unidos. Fue condenado por su responsabilidad en los asesinatos cometidos por integrantes de su grupo en 1969. En agosto de 1969, integrantes del grupo participaron en varios asesinatos, entre ellos el de la actriz Sharon Tate. En 1971 fue condenado por asesinato y conspiración para cometer asesinatos.
+
+</p>
+    
+</body> 
+<script>
+    let indiceActual = 0;
+
+    function mover(direccion) {
+      const diapositivas = document.querySelectorAll('.diapositiva');
+      const totalDiapositivas = diapositivas.length;
+     
+      indiceActual += direccion;
+
+      if (indiceActual >= totalDiapositivas) {
+        indiceActual = 0;
+      } else if (indiceActual < 0) {
+        indiceActual = totalDiapositivas - 1;
+      }
+
+      const carrusel = document.getElementById('carrusel');
+      carrusel.style.transform = `translateX(-${indiceActual * 100}%)`;
+    }
+  </script>
+</html>
